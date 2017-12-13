@@ -1,14 +1,19 @@
 {
   "name": "was-it-helpful",
   "description": "Simple Vue.js widget to gather feedback",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Eugene Dementjev <drdaemos@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drdaemos/was-it-helpful-widget.git"
+  },
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
-  "module": "src/main.js",
+  "main": "dist/build.js",
+  "unpkg": "dist/build.js",
   "dependencies": {
     "vue": "^2.4.4"
   },
