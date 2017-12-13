@@ -2,21 +2,21 @@
 <div class="was-it-helpful-wrapper" :class="classes">
     <div class="give" v-show="!thanksVisible">
         <div class="give__answers" v-show="isHelpful === null">
-            <span class="give__title">Was this article helpful?</span>
+            <span class="give__title">{{ labels.question_text }}</span>
             <div class="give-answers">
-                <a href="#" @click.prevent="wasHelpful">Yes</a>
-                <a href="#" @click.prevent="wasNotHelpful">No</a>
+                <a href="#" @click.prevent="wasHelpful">{{ labels.answer_yes }}</a>
+                <a href="#" @click.prevent="wasNotHelpful">{{ labels.answer_no }}</a>
             </div>
         </div>
         <form class="give-answers__why appears" v-show="isHelpful === false" @submit.prevent="sendFeedback">
-            <label for="why-not">Sorry about that! How can we improve it?</label>
+            <label for="why-not">{{ labels.sorry_text }}</label>
             <textarea v-model="feedbackMsg" id="why-not" name="why-not" required=""></textarea>
-            <button>Send feedback</button>
+            <button>{{ labels.submit_btn }}</button>
         </form>
     </div>
     <div class="give ty appears" v-show="thanksVisible">
         <span class="title--mini">
-            Thanks! <img src="./assets/tick_ok.gif">
+            {{ labels.thank_you }} <img src="./assets/tick_ok.gif">
         </span>
     </div>
 </div>
@@ -25,7 +25,7 @@
 <script>
 export default {
   name: 'was-it-helpful',
-  props: ['onSubmit'],
+  props: ['onSubmit', 'labels'],
   data () {
     return {
       isHelpful: null,

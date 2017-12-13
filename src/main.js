@@ -8,7 +8,8 @@ export default class WasItHelpful {
           el: element,
           render: h => h(Widget, {
             props: {
-                onSubmit: this.options.onSubmit
+                onSubmit: this.options.onSubmit,
+                labels: this.options.labels
             }
           })
         })
@@ -16,6 +17,14 @@ export default class WasItHelpful {
 
     get defaultOptions() {
         return {
+            labels: {
+                "question_text": "Was this article helpful?",
+                "answer_yes": "Yes",
+                "answer_no": "No",
+                "sorry_text": "Sorry about that! How can we improve it?",
+                "submit_btn": "Send feedback",
+                "thank_you": "Thanks!"
+            },
             onSubmit (data) {
                 console.log('WasItHelpful feedback was submitted', data);
             }
