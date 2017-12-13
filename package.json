@@ -1,7 +1,7 @@
 {
   "name": "was-it-helpful",
   "description": "Simple Vue.js widget to gather feedback",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "author": "Eugene Dementjev <drdaemos@gmail.com>",
   "license": "MIT",
   "repository": {
@@ -15,6 +15,7 @@
   "main": "dist/build.js",
   "unpkg": "dist/build.js",
   "dependencies": {
+    "base64-image-loader": "^1.2.1",
     "vue": "^2.4.4"
   },
   "browserslist": [

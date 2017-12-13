@@ -4,8 +4,8 @@
         <div class="give__answers" v-show="isHelpful === null">
             <span class="give__title">Was this article helpful?</span>
             <div class="give-answers">
-                <a href="#" @click="wasHelpful">Yes</a>
-                <a href="#" @click="wasNotHelpful">No</a>
+                <a href="#" @click.prevent="wasHelpful">Yes</a>
+                <a href="#" @click.prevent="wasNotHelpful">No</a>
             </div>
         </div>
         <form class="give-answers__why appears" v-show="isHelpful === false" @submit.prevent="sendFeedback">
