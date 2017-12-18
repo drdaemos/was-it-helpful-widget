@@ -1,7 +1,7 @@
 {
   "name": "was-it-helpful",
-  "description": "Simple Vue.js widget to gather feedback",
-  "version": "1.0.5",
+  "description": "Simple Javascript widget based on Vue.js 2.x to gather feedback on knowledge base, guide and similar pages.",
+  "version": "1.0.6",
   "author": "Eugene Dementjev <drdaemos@gmail.com>",
   "license": "MIT",
   "repository": {
